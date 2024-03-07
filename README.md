@@ -4,7 +4,7 @@
 
 ### 1. Dependencies
 
-You need a Python environment with `Django 5.0.3` and `Django REST Framework 3.14` installed.
+You need a Python environment with `Django 5.0.3`, `Django REST Framework 3.14` and `Pillow 10.2` installed.
 I use `pipenv`, a tool that manages this.
 
 If you have `pipenv` installed (only available on Linux) navigate to the repository folder and run the next commands:
@@ -24,26 +24,18 @@ Once you set up the dependencies, just run the command:
 
 Open your browser and go to http://localhost:8080/
 
-## Info
+## About the project
 
-```
-localhost:8080/ ──┬── user/
-                  │
-                  └── api/
-```
+### Vehicle Models
+![Database design](./doc/vehicleDB.png)
 
-<div style="color: mediumspringgreen;">
-<span style="font-size: 1.6rem;">
-( ! ) About API<br>
-</span>
+### ( ! ) About API
 API has the core functionality, but doesn't implement it's own authentication and authorization system (typically JWT).<br>
-Instead, for this challenge I use my own implementation of the Django Users model, adapted from a previous project.<br>
+Instead, for this challenge I use the default Django Users model.<br>
 This way the API has a working permissions system, but without implementing an API for the users.<br>
-<span style="font-size: 1.6rem;">
-( ! ) About Settings<br>
-</span>
+
+### ( ! ) About Settings
 The settings used for this project are not optimized for a production environment, some password validators were removed, static and media content work locally, etc.
-</div>
 
 ## My development environment
 
