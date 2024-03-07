@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from api.vehicle.views import VehicleListAPIView, VehicleDetailAPIView
+from django.shortcuts import redirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', lambda r: redirect('admin/')),
+    path('api/', VehicleListAPIView.as_view()),
+    path('api/<pk>/', VehicleDetailAPIView.as_view()),
 ]
