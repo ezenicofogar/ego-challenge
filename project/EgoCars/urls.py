@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from api.vehicle.views import VehicleListAPIView, VehicleDetailAPIView
 from django.shortcuts import redirect
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', lambda r: redirect('admin/')),
-    path('api/', VehicleListAPIView.as_view()),
-    path('api/<pk>/', VehicleDetailAPIView.as_view()),
-]
+    path('api/vehicle/', VehicleListAPIView.as_view()),
+    path('api/vehicle/<pk>/', VehicleDetailAPIView.as_view()),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

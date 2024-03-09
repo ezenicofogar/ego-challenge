@@ -1,5 +1,9 @@
 # ego-challenge
 
+[Ver en español](README_ES.md)
+
+
+
 ## How to run the project
 
 ### 1. Dependencies
@@ -24,18 +28,48 @@ Once you set up the dependencies, just run the command:
 
 Open your browser and go to http://localhost:8080/
 
-## About the project
+
+
+## Information
 
 ### Vehicle Models
 ![Database design](./doc/vehicleDB.png)
 
-### ( ! ) About API
-API has the core functionality, but doesn't implement it's own authentication and authorization system (typically JWT).<br>
-Instead, for this challenge I use the default Django Users model.<br>
-This way the API has a working permissions system, but without implementing an API for the users.<br>
+### Root / Admin
+The root url redirects you to the admin to make changes in the data<br>
+http://localhost:8080/ -> http://localhost:8080/admin/
 
-### ( ! ) About Settings
-The settings used for this project are not optimized for a production environment, some password validators were removed, static and media content work locally, etc.
+### API List View
+http://localhost:8080/api/vehicle/
+
+### API Vehicle Details
+http://localhost:8080/api/vehicle/12/ <br>
+(12 is the only vehicle with "vehiclesite")
+
+### Filters
+"Autos" <br>
+http://192.168.1.8:8080/api/vehicle/?filter=autos
+
+"Pickups y comerciales" <br>
+http://192.168.1.8:8080/api/vehicle/?filter=pickups,comerciales
+
+"SUVs y Crossovers" <br>
+http://192.168.1.8:8080/api/vehicle/?filter=suvs,crossovers
+
+### Order
+Lower to higher price <br>
+http://192.168.1.8:8080/api/vehicle/?order=price
+
+Higher to lower price <br>
+http://192.168.1.8:8080/api/vehicle/?order=price&reverse
+
+Newest first <br>
+http://192.168.1.8:8080/api/vehicle/?order=year
+
+Oldest first <br>
+http://192.168.1.8:8080/api/vehicle/?order=year&reverse
+
+
 
 ## My development environment
 
@@ -43,3 +77,11 @@ The settings used for this project are not optimized for a production environmen
 - Python Dependencies: `pipenv`
 - Editor: `Visual Studio Code`
 - O.S.: `Manjaro Linux (arch)`
+
+
+
+## Details
+For this challenge, I structured things differently than I would typically do, as the objectives are specific and isolated, removing the need to consider the security and scalability of the project. However, it seems interesting to mention the following:
+- There is no structured configuration, and I did not take into account the necessary details for working in production.
+- The design of the models (the database) is simple to meet the requirements.
+- No testing code was written; it was simply tested manually.

@@ -1,6 +1,6 @@
 # Local CDN and Database
-localCDN/
-localDB.sqlite3
+# localCDN/
+# localDB.sqlite3
 
 # Visual Studio Code
 .vscode/

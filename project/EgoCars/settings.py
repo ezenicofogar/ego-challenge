@@ -133,6 +133,9 @@ STATICFILES_DIRS = [
     CONTENT_DIR/"static",
 ]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = CONTENT_DIR/"media"
+
 # REST Framework Related Settings:
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
