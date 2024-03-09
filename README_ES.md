@@ -48,26 +48,26 @@ http://localhost:8080/api/vehicle/12/ <br>
 
 ### Detalles
 "Autos" <br>
-http://192.168.1.8:8080/api/vehicle/?filter=autos
+http://localhost:8080/api/vehicle/?filter=autos
 
 "Pickups y comerciales" <br>
-http://192.168.1.8:8080/api/vehicle/?filter=pickups,comerciales
+http://localhost:8080/api/vehicle/?filter=pickups,comerciales
 
 "SUVs y Crossovers" <br>
-http://192.168.1.8:8080/api/vehicle/?filter=suvs,crossovers
+http://localhost:8080/api/vehicle/?filter=suvs,crossovers
 
 ### Orden
 De menor a mayor precio <br>
-http://192.168.1.8:8080/api/vehicle/?order=price
+http://localhost:8080/api/vehicle/?order=price
 
 De mayor a menor precio <br>
-http://192.168.1.8:8080/api/vehicle/?order=price&reverse
+http://localhost:8080/api/vehicle/?order=price&reverse
 
 Más nuevos primero <br>
-http://192.168.1.8:8080/api/vehicle/?order=year
+http://localhost:8080/api/vehicle/?order=year
 
 Más antiguos primero <br>
-http://192.168.1.8:8080/api/vehicle/?order=year&reverse
+http://localhost:8080/api/vehicle/?order=year&reverse
 
 
 
